@@ -29,7 +29,7 @@ def get_task_by_id(pk):
 @app.post("/tasks")
 def create_task():
     task_data=request.json
-    task.insert(task.data)
+    task.insert(task_data)
     return "", 204
 
 @app.put("/tasks/<int:pk>/")
